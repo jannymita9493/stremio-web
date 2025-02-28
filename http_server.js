@@ -20,4 +20,4 @@ express().use(express.static(build_path, {
 })).all('*', (_req, res) => {
     // TODO: better 404 page
     res.status(404).send('<h1>404! Page not found</h1>');
-}).listen(HTTP_PORT, () => console.info(`Server listening on port: ${HTTP_PORT}`));
+.listen(PORT, '0.0.0.0', () => console.info(`Server listening on port: ${PORT}`));
